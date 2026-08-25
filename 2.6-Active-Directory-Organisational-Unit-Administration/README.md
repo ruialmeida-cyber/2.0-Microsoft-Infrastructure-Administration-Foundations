@@ -540,8 +540,8 @@ $LabIT = Get-ADOrganizationalUnit `
     -Identity "OU=Lab-IT,$DomainDN" `
     -ErrorAction Stop
 
-$LabUsers = Get-ADOrganizationalUnit `
-    -Identity "OU=Lab-Users,$LabIT" `
+$LabComputers = Get-ADOrganizationalUnit `
+    -Identity "OU=Lab-Computers,$($LabIT.DistinguishedName)" `
     -ErrorAction Stop
 
 $LabComputers = Get-ADOrganizationalUnit `
